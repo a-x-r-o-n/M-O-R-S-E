@@ -19,7 +19,6 @@ The project consists of two files:
 The mapping of alphabets to Morse Code is as follows:
 - A: `._`
 - B: `_...`
-- C: `_._.`
 - ...
 - Z: `__..`
 
