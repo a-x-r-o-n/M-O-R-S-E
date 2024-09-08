@@ -1,3 +1,4 @@
+alphabets = [chr(i) for i in range(97,123)]
 def isAlphabet(a):
     if a == 'a':
         return "._"
@@ -51,8 +52,66 @@ def isAlphabet(a):
         return "_.__"
     elif a == 'z':
         return "__.."
-    
-
-msg = input("Enter your message: ")
-code = ""
-alphabets = [chr(i) for i in range(97,123)]
+# -------------------------------------------------------
+def morseToPlain(traverse):
+    if traverse == ".....":
+        return " "
+    elif traverse == "._":
+        return 'a'
+    elif traverse == "_...":
+        return 'b'
+    elif traverse == "_._.":
+        return 'c'
+    elif traverse == "_..":
+        return 'd'
+    elif traverse == ".":
+        return 'e'
+    elif traverse == ".._.":
+        return 'f'
+    elif traverse == "__.":
+        return 'g'
+    elif traverse == "....":
+        return 'h'
+    elif traverse == "..":
+        return 'i'
+    elif traverse == ".___":
+        return 'j'
+    elif traverse == "_._":
+        return 'k'
+    elif traverse == "._..":
+        return 'l'
+    elif traverse == "__":
+        return 'm'
+    elif traverse == "_.":
+        return 'n'
+    elif traverse == "___":
+        return 'o'
+    elif traverse == ".__.":
+        return 'p'
+    elif traverse == "__._":
+        return 'q'
+    elif traverse == "._.":
+        return 'r'
+    elif traverse == "...":
+        return 's'
+    elif traverse == "_":
+        return 't'
+    elif traverse == ".._":
+        return 'u'
+    elif traverse == "..._":
+        return 'v'
+    elif traverse == ".__":
+        return 'w'
+    elif traverse == "_.._":
+        return 'x'
+    elif traverse == "_.__":
+        return 'y'
+    elif traverse == "__..":
+        return 'z'
+def plainText(*code):
+    msg = ""
+    for traverse in code:
+        for i in traverse:
+            msg = msg + morseToPlain(i)
+    #print(f"Message: {msg}")
+    return msg
