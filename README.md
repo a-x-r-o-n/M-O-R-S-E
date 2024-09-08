@@ -1,6 +1,3 @@
-Here is a detailed `README.md` for your project "M-O-R-S-E" based on the contents of the provided files:
-
-```markdown
 # M-O-R-S-E
 
 M-O-R-S-E is a simple Python project that converts between plain text and Morse code. It provides functionality to translate messages from plain text to Morse code and vice versa, supporting all lowercase letters of the alphabet.
@@ -86,40 +83,6 @@ Input: .... . ._.. ._.. ___
 Output: hello
 ```
 
-## Code Overview
-
-### main.py
-
-This file handles the user input and calls the appropriate functions to perform the conversion.
-
-```python
-def main():
-    menu = input("1) Plain to Morse\t(or)\tMorse to Plain\nenter choice either 1 or 2: ")
-    if menu == '1':
-        plainToMorse(input("Enter your message: "))
-    elif menu == '2':
-        morseToPlain(input("Enter Morse: "))
-```
-
-### module.py
-
-This file contains two main functions: `isAlphabet()` and `morseToPlain()`, which handle the character-by-character translation between plain text and Morse code.
-
-For example, the letter `a` is translated to `._` using the `isAlphabet()` function:
-```python
-def isAlphabet(a):
-    if a == 'a':
-        return "._"
-    # Rest of the alphabet mapping
-```
-
-The reverse conversion from Morse to plain text is done by the `morseToPlain()` function:
-```python
-def morseToPlain(traverse):
-    if traverse == "._":
-        return 'a'
-    # Rest of the Morse to alphabet mapping
-```
 
 ## Contributing
 
